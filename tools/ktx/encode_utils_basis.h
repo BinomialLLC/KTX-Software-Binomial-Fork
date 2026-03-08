@@ -1,8 +1,7 @@
 // Copyright 2022-2023 The Khronos Group Inc.
 // Copyright 2022-2023 RasterGrid Kft.
+// Copyright 2026 Binomial LLC: basisu v2.10 integration.
 // SPDX-License-Identifier: Apache-2.0
-
-// Binomial LLC: Basis Universal v2.1 integration changes
 
 #pragma once
 

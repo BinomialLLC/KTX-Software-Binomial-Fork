@@ -1,7 +1,7 @@
 # Copyright 2022-2023 The Khronos Group Inc.
 # Copyright 2022-2023 RasterGrid Kft.
+# Copyright 2026 Binomial LLC: Renaming ktx tool to btx, basisu v2.10 integration changes
 # SPDX-License-Identifier: Apache-2.0
-# Change made by Richard Geldreich, Binomial LLC 3/8/2026: renaming ktx tool to btx
 
 add_executable(ktxtools
         command.cpp

@@ -1,8 +1,7 @@
 // Copyright 2022-2023 The Khronos Group Inc.
 // Copyright 2022-2023 RasterGrid Kft.
+// Copyright 2026 Binomial LLC: basisu v2.10 integration.
 // SPDX-License-Identifier: Apache-2.0
-
-// change made by Richard Geldreich, Binomial LLC, 3/8/2026: Tools::main() now displays "[BINOMIAL FORK]" for the --help command. Tool named to "btx". Tools::printUsage() modified to print btx.
 
 #include "command.h"
 #include "platform_utils.h"

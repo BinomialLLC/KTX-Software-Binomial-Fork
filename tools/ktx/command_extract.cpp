@@ -1,8 +1,7 @@
 // Copyright 2022-2023 The Khronos Group Inc.
 // Copyright 2022-2023 RasterGrid Kft.
+// Copyright 2026 Binomial LLC: basisu v2.10 integration.
 // SPDX-License-Identifier: Apache-2.0
-
-// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
 
 #include "command.h"
 #include "platform_utils.h"

@@ -1,6 +1,6 @@
 // Copyright 2022-2023 The Khronos Group Inc.
 // Copyright 2022-2023 RasterGrid Kft.
-// Copyright 2026 Binomial LLC: renaming "ktx" to "btx" in help text. Adding --debug option for codec parameter validation. Adding --verbose command line option.
+// Copyright 2026 Binomial LLC: renaming "ktx" to "btx" in help text. Adding --debug option for codec parameter validation. Adding --verbose command line option. basisu v2.10 integration.
 // SPDX-License-Identifier: Apache-2.0
 
 #include "command.h"

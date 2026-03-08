@@ -1014,6 +1014,7 @@ ktxTexture2_CompressBasisEx(ktxTexture2* This, ktxBasisParams* params)
         
     if (debug_mode) {
         cparams.m_debug = true;
+        cparams.m_compute_stats = true;
         basisu::enable_debug_printf(true);
     }
 

@@ -19,6 +19,7 @@
  */
 
 // 3/7/2026: Binomial LLC: Added 2 lines to ktxTexture2_CompressBasisEx() so the existing --uastc-quality level and --uastc-hdr-6x6i-level options are correctly plumbed into our HDR codec, so the user can change their effort levels. LICENSE: Apache 2.0.
+// Other changes for basisu integration.
 
 #include <inttypes.h>
 #include <stdlib.h>
@@ -50,6 +51,10 @@
   #pragma clang diagnostic pop
 #endif
 #include "dfdutils/dfd.h"
+
+#ifndef DEBUG_ENCODER
+#define DEBUG_ENCODER 0
+#endif
 
 using namespace basisu;
 using namespace basist;
@@ -632,7 +637,7 @@ ktxTexture2_CompressBasisEx(ktxTexture2* This, ktxBasisParams* params)
     cparams.m_read_source_images = false; // Don't read from source files.
     cparams.m_write_output_basis_or_ktx2_files = false; // Don't write output files.
     cparams.m_create_ktx2_file = false; // To avoid rewriting this code, continue with .basis.
-    cparams.m_status_output = params->verbose;
+    cparams.m_status_output = params->verbose || params->codec_debug_mode || (DEBUG_ENCODER != 0);
 
     switch (params->codec) {
     case ktx_basis_codec_e::KTX_BASIS_CODEC_ETC1S:
@@ -1005,11 +1010,12 @@ ktxTexture2_CompressBasisEx(ktxTexture2* This, ktxBasisParams* params)
     cparams.m_write_output_basis_files = true;
 #endif
 
-#define DEBUG_ENCODER 0
-#if DEBUG_ENCODER
-    cparams.m_debug = true;
-    g_debug_printf = true;
-#endif
+    const bool debug_mode = (DEBUG_ENCODER != 0) || params->codec_debug_mode;
+        
+    if (debug_mode) {
+        cparams.m_debug = true;
+        basisu::enable_debug_printf(true);
+    }
 
     basis_compressor c;
 

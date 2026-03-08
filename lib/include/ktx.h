@@ -12,6 +12,8 @@
  * the KTX library and KTX loader tests.
  */
 
+// Binomial LLC: Adding --debug option.
+
 /**
  * @file
  * @~English
@@ -1435,6 +1437,9 @@ typedef struct ktxBasisParams {
          */
     ktx_basis_codec codec;
         /*!<  Flag to indicate which codec to use. 0 - NONE, 1 - ETC1S, 2 - UASTC_LDR, 3 - UASTC_HDR4x4, 4 - UASTC_HDR6x6i. */
+    ktx_bool_t codec_debug_mode;
+        /*!< If true, codec development/debug information is printed to stdout. 
+         */
     ktx_bool_t verbose;
         /*!< If true, prints Basis Universal encoder operation details to
              @c stdout. Not recommended for GUI apps.

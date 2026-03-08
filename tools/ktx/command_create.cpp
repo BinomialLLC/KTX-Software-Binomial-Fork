@@ -2,7 +2,7 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
-// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text. Adding --debug option for codec parameter validation.
 
 #include "command.h"
 #include "encode_utils_common.h"
@@ -87,6 +87,7 @@ struct OptionsCreate {
     inline static const char* kMipmapWrap = "mipmap-wrap";
     inline static const char* kScale = "scale";
     inline static const char* kPremultiplyAlpha = "premultiply-alpha";
+    inline static const char* kDebug = "debug";
 
     bool _1d = false;
     bool cubemap = false;
@@ -128,6 +129,8 @@ struct OptionsCreate {
     bool warnOnOriginChanges = false;
     bool normalize = false;
     bool premultiplyAlpha = false;
+
+    bool debug = false;
 
     void init(cxxopts::Options& opts) {
         opts.add_options()
@@ -245,7 +248,8 @@ struct OptionsCreate {
                 (kNoWarnOnColorConversions, "Disable all warnings about color conversions including that for"
                     " visually lossy conversions. Overrides --warn-on-color-conversions should both be specified.")
                 (kFailOnOriginChanges, "Generates an error if any of the input images would need to have their origin changed.")
-                (kWarnOnOriginChanges, "Generates a warning if any of the input images have their origin changed.");
+                (kWarnOnOriginChanges, "Generates a warning if any of the input images have their origin changed.")
+                (kDebug, "Enable debug behavior for development/testing.");
 
         opts.add_options("Generate Mipmap")
                 (kMipmapFilter, "Specifies the filter to use when generating the mipmaps. Case insensitive."
@@ -825,6 +829,12 @@ struct OptionsCreate {
                                    kPremultiplyAlpha, kRaw);
             }
             premultiplyAlpha = true;
+        }
+
+        debug = args[kDebug].as<bool>();
+
+        if (debug) {
+            printf("Debug mode enabled.\n");
         }
     }
 };
@@ -1901,11 +1911,13 @@ void CommandCreate::executeCreate() {
         KTXmapRange data = {1, 0};
         ktxHashList_AddKVPair(&texture->kvDataHead, KTX_MAP_RANGE_KEY, sizeof(KTXmapRange), &data);
     }
-
+        
     // Encode and apply compression
 
     MetricsCalculator metrics;
     metrics.saveReferenceImages(texture, options, *this);
+
+    options.codec_debug_mode = options.debug;
 
     if (options.selectedCodec != BasisCodec::NONE)
         encodeBasis(texture, options);

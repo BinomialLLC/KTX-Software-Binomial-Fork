@@ -18,6 +18,8 @@
  * @author Mark Callow, github.com/MarkCallow
  */
 
+// 3/7/2026: Added 2 lines to ktxTexture2_CompressBasisEx() so the existing --uastc-quality level and --uastc-hdr-6x6i-level options are correctly plumbed into our HDR codec, so the user can change their effort levels. LICENSE: Apache 2.0.
+
 #include <inttypes.h>
 #include <stdlib.h>
 #include <cstring> // std::memcpy
@@ -899,9 +901,11 @@ ktxTexture2_CompressBasisEx(ktxTexture2* This, ktxBasisParams* params)
                                     !params->uastcRDONoMultithreading;
         }
         cparams.m_hdr_favor_astc = params->uastcHDRFavorAstc;
+        cparams.m_uastc_hdr_4x4_options.set_quality_level(params->uastcHDRQuality); // <-- ADDED LINE, Richard Geldreich Binomial LLC 3/7/2026
         cparams.m_uastc_hdr_4x4_options.m_allow_uber_mode = params->uastcHDRUberMode;
         cparams.m_uastc_hdr_4x4_options.m_ultra_quant = params->uastcHDRUltraQuant;
         cparams.m_astc_hdr_6x6_options.m_rec2020_bt2100_color_gamut = params->rec2020;
+        cparams.m_astc_hdr_6x6_options.set_user_level(params->uastcHDRLevel);  // <-- ADDED LINE, Richard Geldreich Binomial LLC 3/7/2026
         if (params->uastcHDRLambda > 0.0f)
         {
             cparams.m_astc_hdr_6x6_options.m_lambda = params->uastcHDRLambda;

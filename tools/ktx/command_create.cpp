@@ -2,7 +2,7 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
-// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text. Adding --debug option for codec parameter validation.
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text. Adding --debug option for codec parameter validation. Adding --verbose command line option.
 
 #include "command.h"
 #include "encode_utils_common.h"
@@ -88,6 +88,7 @@ struct OptionsCreate {
     inline static const char* kScale = "scale";
     inline static const char* kPremultiplyAlpha = "premultiply-alpha";
     inline static const char* kDebug = "debug";
+    inline static const char* kVerbose = "verbose";
 
     bool _1d = false;
     bool cubemap = false;
@@ -131,6 +132,7 @@ struct OptionsCreate {
     bool premultiplyAlpha = false;
 
     bool debug = false;
+    bool verbose = false;
 
     void init(cxxopts::Options& opts) {
         opts.add_options()
@@ -249,7 +251,8 @@ struct OptionsCreate {
                     " visually lossy conversions. Overrides --warn-on-color-conversions should both be specified.")
                 (kFailOnOriginChanges, "Generates an error if any of the input images would need to have their origin changed.")
                 (kWarnOnOriginChanges, "Generates a warning if any of the input images have their origin changed.")
-                (kDebug, "Enable debug behavior for development/testing.");
+                (kDebug, "Enable debug behavior for development/testing.")
+                (kVerbose, "Enable verbose output.");
 
         opts.add_options("Generate Mipmap")
                 (kMipmapFilter, "Specifies the filter to use when generating the mipmaps. Case insensitive."
@@ -832,10 +835,12 @@ struct OptionsCreate {
         }
 
         debug = args[kDebug].as<bool>();
-
+        
         if (debug) {
             printf("Debug mode enabled.\n");
         }
+
+        verbose = args[kVerbose].as<bool>();
     }
 };
 
@@ -1918,6 +1923,7 @@ void CommandCreate::executeCreate() {
     metrics.saveReferenceImages(texture, options, *this);
 
     options.codec_debug_mode = options.debug;
+    ((ktxBasisParams &)options).verbose = ((OptionsCreate &)options).verbose;
 
     if (options.selectedCodec != BasisCodec::NONE)
         encodeBasis(texture, options);

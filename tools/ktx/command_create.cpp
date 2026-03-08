@@ -1,8 +1,7 @@
 // Copyright 2022-2023 The Khronos Group Inc.
 // Copyright 2022-2023 RasterGrid Kft.
+// Copyright 2026 Binomial LLC: renaming "ktx" to "btx" in help text. Adding --debug option for codec parameter validation. Adding --verbose command line option.
 // SPDX-License-Identifier: Apache-2.0
-
-// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text. Adding --debug option for codec parameter validation. Adding --verbose command line option.
 
 #include "command.h"
 #include "encode_utils_common.h"

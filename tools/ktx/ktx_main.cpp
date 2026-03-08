@@ -176,7 +176,7 @@ void Tools::printUsage(std::ostream& os, const cxxopts::Options& options) {
 #endif
     fmt::print(os, "\n");
     fmt::print(os, "For detailed usage and description of each subcommand use 'ktx help <command>'\n"
-                   "or 'ktx <command> --help'\n");
+                   "or 'btx <command> --help'\n");
 }
 
 } // namespace ktx ---------------------------------------------------------------------------------

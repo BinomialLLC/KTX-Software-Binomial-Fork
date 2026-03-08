@@ -2,6 +2,8 @@
 // Copyright 2023-2024 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "command.h"
 #include "sbufstream.h"
 #include "stdafx.h"
@@ -1254,7 +1256,7 @@ private:
 
 int CommandCompare::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx compare",
+        parseCommandLine("btx compare",
                 "Compares the two KTX files specified as the input-file1 and input-file2 arguments.\n"
                 "    The command implicitly calls validate and prints any found errors\n"
                 "    and warnings to stdout.",

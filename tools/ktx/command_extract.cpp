@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "command.h"
 #include "platform_utils.h"
 #include "format_descriptor.h"
@@ -177,7 +179,7 @@ private:
 
 int CommandExtract::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx extract",
+        parseCommandLine("btx extract",
                 "Extract one or multiple images from the KTX2 file specified as the input-file argument\n"
                 "    and, based on the format, save them as Raw, EXR or PNG image files to the output-path.",
                 argc, argv);

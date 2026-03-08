@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "command.h"
 #include <filesystem>
 #include <optional>
@@ -123,7 +125,7 @@ private:
 
 int CommandHelp::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx help",
+        parseCommandLine("btx help",
                 "Displays the man page of a specific ktx command specified as the command argument."
                 "\nIf the command option is missing the main ktx tool man page will be displayed.",
                 argc, argv);

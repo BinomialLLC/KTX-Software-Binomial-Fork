@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "command.h"
 #include "sbufstream.h"
 #include "stdafx.h"
@@ -85,7 +87,7 @@ private:
 
 int CommandInfo::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx info",
+        parseCommandLine("btx info",
                 "Prints information about the KTX v1 or v2 file specified as the input-file argument.\n"
                 "    The command implicitly calls validate for v2 files and prints any found errors\n"
                 "    and warnings to stdout. For KTX v1 files only text format output is supported.",

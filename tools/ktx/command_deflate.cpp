@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "command.h"
 #include "platform_utils.h"
 #include "deflate_utils.h"
@@ -101,7 +103,7 @@ private:
 
 int CommandDeflate::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx deflate",
+        parseCommandLine("btx deflate",
                 "Deflate (supercompress) the KTX file specified as the input-file\n"
                 "    and save it as the output-file.",
                 argc, argv);

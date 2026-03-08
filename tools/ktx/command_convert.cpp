@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "ktx.h"
 #include "ktxint.h"
 #include "command.h"
@@ -170,7 +172,7 @@ private:
 
 int CommandConvert::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx convert",
+        parseCommandLine("btx convert",
                 "Convert the non-KTX2 texture file specified as the input-file argument,\n"
                 "    optionally supercompress the result, and save it as the output-file.",
                 argc, argv);

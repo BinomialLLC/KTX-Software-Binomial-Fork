@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "command.h"
 #include "utility.h"
 #include "validate.h"
@@ -95,7 +97,7 @@ private:
 
 int CommandValidate::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx validate",
+        parseCommandLine("btx validate",
                 "Validates the Khronos texture format version 2 (KTX2) file specified\n"
                 "    as the input-file argument. It prints any found errors and warnings to stdout.",
                 argc, argv);

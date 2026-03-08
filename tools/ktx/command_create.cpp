@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Richard Geldreich, Binomial LLC: renaming "ktx" to "btx" in help text.
+
 #include "command.h"
 #include "encode_utils_common.h"
 #include "platform_utils.h"
@@ -1270,7 +1272,7 @@ private:
 
 int CommandCreate::main(int argc, char* argv[]) {
     try {
-        parseCommandLine("ktx create",
+        parseCommandLine("btx create",
                 "Create, encode and supercompress a KTX2 file from the input images specified as the\n"
                 "    input-file... arguments and save it as the output-file.",
                 argc, argv);

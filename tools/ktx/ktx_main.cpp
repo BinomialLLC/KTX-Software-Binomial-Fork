@@ -2,6 +2,7 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// change made by Richard Geldreich, Binomial LLC, 3/8/2026: Tools::main() now displays "[BINOMIAL FORK]" for the --help command.
 
 #include "command.h"
 #include "platform_utils.h"
@@ -130,7 +131,7 @@ int Tools::main(int argc, char* argv[]) {
     testrun = args["testrun"].as<bool>();
 
     if (args.count("help")) {
-        fmt::print(std::cout, "{}: Unified CLI frontend for the KTX-Software [BINOMIAL FORK] library with sub-commands for specific operations.\n", options.program());
+        fmt::print(std::cout, "{}: Unified CLI frontend for the KTX-Software [BINOMIAL FORK] library with sub-commands for specific operations.\n", options.program()); // change made by Richard Geldreich, Binomial LLC, 3/8/2026
         printUsage(std::cout, options);
         return +rc::SUCCESS;
     }

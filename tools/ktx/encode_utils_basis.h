@@ -2,6 +2,8 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
+// Binomial LLC: Basis Universal v2.1 integration changes
+
 #pragma once
 
 #include "command.h"
@@ -293,6 +295,7 @@ struct OptionsEncodeBasis : public ktxBasisParams {
         uastcRDODontFavorSimplerModes = false;
         uastcRDONoMultithreading = false;
         verbose = false; // Default to quiet operation.
+        codec_debug_mode = false; // No debug output
         uastcHDRFavorAstc = false;
         uastcHDRUltraQuant = false;
         uastcHDRUberMode = false;

@@ -2,7 +2,7 @@
 // Copyright 2022-2023 RasterGrid Kft.
 // SPDX-License-Identifier: Apache-2.0
 
-// change made by Richard Geldreich, Binomial LLC, 3/8/2026: Tools::main() now displays "[BINOMIAL FORK]" for the --help command.
+// change made by Richard Geldreich, Binomial LLC, 3/8/2026: Tools::main() now displays "[BINOMIAL FORK]" for the --help command. Tool named to "btx".
 
 #include "command.h"
 #include "platform_utils.h"
@@ -109,7 +109,7 @@ public:
 // -------------------------------------------------------------------------------------------------
 
 int Tools::main(int argc, char* argv[]) {
-    cxxopts::Options options("ktx", "");
+    cxxopts::Options options("btx", ""); // Richard Geldreich, Binomial LLC 3/8/2026
     options.custom_help("[<command>] [OPTION...]");
     options.set_width(CONSOLE_USAGE_WIDTH);
     options.add_options()

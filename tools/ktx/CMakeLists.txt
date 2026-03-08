@@ -1,7 +1,7 @@
 # Copyright 2022-2023 The Khronos Group Inc.
 # Copyright 2022-2023 RasterGrid Kft.
 # SPDX-License-Identifier: Apache-2.0
-
+# Change made by Richard Geldreich, Binomial LLC 3/8/2026: renaming ktx tool to btx
 
 add_executable(ktxtools
         command.cpp
@@ -40,7 +40,8 @@ create_version_header(tools/ktx ktxtools)
 set_target_properties(
     ktxtools
     PROPERTIES
-        OUTPUT_NAME ktx
+# Change made here by Richard Geldreich, Binomial LLC 3/8/2026
+        OUTPUT_NAME btx
         PDB_NAME ktxtools # Avoid conflict with libktx's .pdb.
 )
 

@@ -170,12 +170,12 @@ void Tools::printUsage(std::ostream& os, const cxxopts::Options& options) {
     fmt::print(os, "  info       Print information about a KTX2 file\n");
     fmt::print(os, "  validate   Validate a KTX2 file\n");
     fmt::print(os, "  compare    Compare two KTX2 files\n");
-    fmt::print(os, "  help       Display help information about the ktx tool\n");
+    fmt::print(os, "  help       Display help information about the btx tool\n");
 #if KTX_DEVELOPER_FEATURE_PATCH
     fmt::print(os, "  patch      Apply certain patch operations to a KTX2 file.");
 #endif
     fmt::print(os, "\n");
-    fmt::print(os, "For detailed usage and description of each subcommand use 'ktx help <command>'\n"
+    fmt::print(os, "For detailed usage and description of each subcommand use 'btx help <command>'\n"
                    "or 'btx <command> --help'\n"); // modified by Richard Geldreich, Binomial LLC, 3/8/2026
 }
 

@@ -130,7 +130,7 @@ int Tools::main(int argc, char* argv[]) {
     testrun = args["testrun"].as<bool>();
 
     if (args.count("help")) {
-        fmt::print(std::cout, "{}: Unified CLI frontend for the KTX-Software library with sub-commands for specific operations.\n", options.program());
+        fmt::print(std::cout, "{}: Unified CLI frontend for the KTX-Software [BINOMIAL FORK] library with sub-commands for specific operations.\n", options.program());
         printUsage(std::cout, options);
         return +rc::SUCCESS;
     }

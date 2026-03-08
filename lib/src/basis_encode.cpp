@@ -18,7 +18,7 @@
  * @author Mark Callow, github.com/MarkCallow
  */
 
-// 3/7/2026: Added 2 lines to ktxTexture2_CompressBasisEx() so the existing --uastc-quality level and --uastc-hdr-6x6i-level options are correctly plumbed into our HDR codec, so the user can change their effort levels. LICENSE: Apache 2.0.
+// 3/7/2026: Binomial LLC: Added 2 lines to ktxTexture2_CompressBasisEx() so the existing --uastc-quality level and --uastc-hdr-6x6i-level options are correctly plumbed into our HDR codec, so the user can change their effort levels. LICENSE: Apache 2.0.
 
 #include <inttypes.h>
 #include <stdlib.h>

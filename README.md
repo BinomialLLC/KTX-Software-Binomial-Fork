@@ -8,7 +8,7 @@
 
 This is an unofficial, live fork of [KTX-Software](https://github.com/KhronosGroup/KTX-Software) by [Khronos Group member](https://www.khronos.org/) Binomial LLC, with key bug fixes and (soon) new GPU supercompressed texture codecs such as XUASTC LDR. The original project is maintained by the Khronos Group. This fork will be periodically synced vs. KTX-Software. This repo has been integrated against the [Basis Universal](https://github.com/BinomialLLC/basis_universal/) v1.6 library (a snapshot from late 2025), and we're working on integrating the latest version (which is now v2.1). 
 
-See our [Release Notes on our main repo here](https://github.com/BinomialLLC/basis_universal/wiki/Release-Notes), which we're keeping in sync with this repo.
+See our [Release Notes on our main repo here](https://github.com/BinomialLLC/basis_universal/wiki/Release-Notes), which we're keeping in sync with this repo. Also see this [repo's wiki](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/wiki), where we'll document how to use the new codecs we'll be adding to this software.
 
 The primary changes we've made to this repository are:
 - Live back porting, integration and testing of security fixes directly from the main [Basis Universal repo](https://github.com/BinomialLLC/basis_universal).
@@ -19,8 +19,6 @@ The primary changes we've made to this repository are:
 - The `create` command now supports `--verbose` and `--debug` options, so we can validate proper command line parsing/codec parameter passing to our codecs.
  
 Other improvements and fixes will be made as we find them. We will be integrating and testing the new [XUASTC LDR codec](https://github.com/BinomialLLC/basis_universal/wiki/JPEG-for-ASTC) (shipped in Basis Universal v2.0) into this fork very soon, as indicated to Khronos in an official meeting on 3/7/2026. We are following the project's [original CONTRIBUTING.md file](https://github.com/KhronosGroup/KTX-Software/blob/main/CONTRIBUTING.md), which requires a fork. 
-
-See this [repo's wiki](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/wiki), where we'll document how to use the new codecs we'll be adding to this software.
 
 # License and Legal
 

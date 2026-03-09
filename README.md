@@ -11,7 +11,7 @@ This is an unofficial, live fork of [KTX-Software](https://github.com/KhronosGro
 See our [Release Notes on our main repo here](https://github.com/BinomialLLC/basis_universal/wiki/Release-Notes), which we're keeping in sync with this repo. Also see this [repo's wiki](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/wiki), where we'll document how to use the new codecs we'll be adding to this software.
 
 The primary changes we've made to this repository are:
-- Live back porting, integration and testing of security fixes directly from the main [Basis Universal repo](https://github.com/BinomialLLC/basis_universal).
+- Live back porting, integration and testing of security fixes (such as [this one](https://github.com/BinomialLLC/basis_universal/commit/58e3afbabae592e97e6a736e0908c03bc7a4dd4f)) directly from the main [Basis Universal repo](https://github.com/BinomialLLC/basis_universal).
 - The file [`lib/src/basis_encode.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/lib/src/basis_encode.cpp): This fixes the `ktx` (renamed to `btx` in this repo) tool's `--uastc-quality` and `--uastc-hdr-6x6i-level` options, which are broken in KTX-Software. For more technical information, see our [KTX2 File Format Support Technical Details](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) wiki.
 
 - **The `ktx` tool has been renamed to `btx` in help text and [`tools/ktx/CMakeLists.txt`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/CMakeLists.txt).** So wherever you would run `ktx`, you can now run `btx`.

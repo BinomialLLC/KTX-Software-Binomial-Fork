@@ -2041,7 +2041,7 @@ namespace basist
 
 #if BASISD_SUPPORT_UASTC_HDR
 		// TODO: Examine this, optimize for startup time/mem utilization.
-		astc_helpers::init_tables(false);
+		astc_helpers::init_tables(true);
 
 		astc_hdr_core_init();
 #endif

@@ -1,5 +1,5 @@
 <!-- Copyright 2013-2020 Mark Callow -->
-<!-- Copyright 2026 Binomial LLC -->
+<!-- Copyright 2016-2026 Binomial LLC -->
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 
 # KTX-Software-Binomial-Fork (Bug/Security Fixes, and New Basis Universal GPU Texture Codecs)

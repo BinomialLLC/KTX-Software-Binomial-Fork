@@ -1,4 +1,4 @@
-LICENSE.md
+[LICENSE.md](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/LICENSE.md)
 
 ---
 

@@ -113,11 +113,11 @@ Verbose output, mipmaps, UASTC HDR 6x6i level 4 (valid range is [0,12]), lambda 
 btx create --verbose --format R16G16B16_SFLOAT --generate-mipmap --encode uastc-hdr-6x6i desk.exr file.ktx2 --uastc-hdr-6x6i-level 4 --uastc-hdr-lambda 500
 ```
 
-The generated KTX2 files can then be unpacked, or validated etc. using the `basisu` command line tool, or transcoded to other GPU texture formats using our transcoder module. Binomial has [documented here](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) exactly how the KTX2 file format is utilized by our codecs.
+The generated KTX2 files can then be unpacked using the `basisu` command line tool, or transcoded to other GPU texture formats using our transcoder module. Binomial has [documented here](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) exactly how the KTX2 file format is utilized by our codecs.
 
 Note Basis Universal v2.0 introduced unified/simplified "effort" and "quality" options which work across all of our codecs, which are coming to this fork soon.
 
-# KTX2 Validation Command Line Examples
+# KTX2 Command Line Examples
 
 ## UASTC HDR 4x4
 

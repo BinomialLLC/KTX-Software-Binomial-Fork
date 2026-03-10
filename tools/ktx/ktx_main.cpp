@@ -223,7 +223,7 @@ int main(int argc, char* argv[]) {
     //      // Remove these from the arguments under consideration.
 
     printf(
-        "btx v0.10 [BINOMIAL FORK]. Not for validation purposes.\nSee: "
+        "btx v0.10 [BINOMIAL FORK]. Not for KTX2 specification validation purposes.\nThis fork is only for codec and interoperability testing. See:\n"
         "https://github.com/BinomialLLC/KTX-Software-Binomial-Fork\n\n");
     
     InitUTF8CLI(argc, argv);

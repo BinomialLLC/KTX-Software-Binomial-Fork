@@ -1256,9 +1256,7 @@ private:
 int CommandCompare::main(int argc, char* argv[]) {
     try {
         parseCommandLine("btx compare",
-                "Compares the two KTX files specified as the input-file1 and input-file2 arguments.\n"
-                "    The command implicitly calls validate and prints any found errors\n"
-                "    and warnings to stdout.",
+                "Compares the two KTX files specified as the input-file1 and input-file2 arguments.\n",
                 argc, argv);
         executeCompare();
         return to_underlying(rc::SUCCESS);

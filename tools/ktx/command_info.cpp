@@ -87,9 +87,7 @@ private:
 int CommandInfo::main(int argc, char* argv[]) {
     try {
         parseCommandLine("btx info",
-                "Prints information about the KTX v1 or v2 file specified as the input-file argument.\n"
-                "    The command implicitly calls validate for v2 files and prints any found errors\n"
-                "    and warnings to stdout. For KTX v1 files only text format output is supported.",
+                "Prints information about the KTX v1 or v2 file specified as the input-file argument.\n",
                 argc, argv);
         executeInfo();
         return to_underlying(rc::SUCCESS);

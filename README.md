@@ -29,11 +29,11 @@ Other improvements and fixes will be made as we find them. We will be integratin
 
 # License and Legal
 
-This independent fork is not endorsed by or an official product of the Khronos Group. Khronos® is a registered trademark of The Khronos Group Inc. This software is Copyright 2015-2026 [The Khronos Group Inc.](https://www.khronos.org/) KTX™ is a trademark of The Khronos Group Inc. See the project's Apache 2.0 [license information](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/tree/main?tab=License-1-ov-file#readme), and see the actual [LICENSE here](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/LICENSES/Apache-2.0.txt). Basis Universal™ is a trademark of Binomial LLC.
+This independent fork is not endorsed by or an official product of the Khronos Group. Khronos® is a registered trademark of The Khronos Group Inc. This software is Copyright 2015-2026 [The Khronos Group Inc.](https://www.khronos.org/) KTX™ is a trademark of The Khronos Group Inc. See the project's Apache 2.0 [license information](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/tree/main?tab=License-1-ov-file#readme), and see the actual [LICENSE here](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/LICENSES/Apache-2.0.txt).
 
 All changes to the original software have been prominently indicated with comments, as required by the Apache License, Version 2.0 §4(b). Our modifications are licensed under the Apache License, Version 2.0. 
 
-Binomial LLC is a Khronos Group Member, and contributions by Members to products based on Khronos Ratified Specifications are covered under the [Khronos Membership Agreement's](https://www.khronos.org/files/member_agreement.pdf) IP Rights Policy (Attachment A, Sections 2.1 and 2.2).
+Binomial LLC is a Khronos Group Member, and contributions by Members to products based on Khronos Ratified Specifications are covered under the [Khronos Membership Agreement's](https://www.khronos.org/files/member_agreement.pdf) IP Rights Policy (Attachment A, Sections 2.1 and 2.2). Basis Universal™ is a trademark of Binomial LLC.
 
 # What Motivated This Fork
 

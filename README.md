@@ -17,7 +17,7 @@ The primary changes we've made to this repository are:
 
 - **The `ktx` tool has been renamed to `btx` in help text and [`tools/ktx/CMakeLists.txt`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/CMakeLists.txt).** So wherever you would run `ktx`, you can now run `btx`.
 
-**Note `btx` is not intended to be used for KTX2 specification validation purposes, so there is no `--validate` command in this fork. Only `ktx` can do this, which [lives upstream of this fork](https://github.com/KhronosGroup/KTX-Software).**
+**Note `btx` is not intended to be used for KTX2 specification validation purposes, so there is no `--validate` command in this fork. Only `ktx` can do this, which [lives upstream of this fork](https://github.com/KhronosGroup/KTX-Software).** The other commands (`info`, `create`, `extract` etc.) work as usual.
 
 - The `btx` tool (and this repo) exists mainly for cross‑checking and early interoperability testing of KTX2 files used with Basis Universal related codecs. Specifically, `btx` can be used to test if KTX2 files emitted by `basisu` are readable, and vice versa.
  

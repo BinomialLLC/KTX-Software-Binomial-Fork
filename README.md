@@ -79,7 +79,6 @@ Available commands:
   extract    Extract selected images from a KTX2 file
   transcode  Transcode a KTX2 file
   info       Print information about a KTX2 file
-  check      Check a KTX2 file
   compare    Compare two KTX2 files
   help       Display help information about the btx tool
 

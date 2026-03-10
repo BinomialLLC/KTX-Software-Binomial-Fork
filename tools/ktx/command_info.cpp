@@ -156,7 +156,9 @@ KTX_error_code CommandInfo::printInfoText(std::istream& file) {
         fmt::print(messagesOS, "    {}\n", issue.details);
     });
 
-    fmt::print("Validation {}\n", validationResult == 0 ? "successful" : "failed");
+    //fmt::print("Validation {}\n", validationResult == 0 ? "successful" : "failed");
+    fmt::print("Checking {}\n", validationResult == 0 ? "successful" : "failed");
+
     const auto validationMessages = std::move(messagesOS).str();
     if (!validationMessages.empty()) {
         fmt::print("\n");

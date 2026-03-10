@@ -136,7 +136,8 @@ void CommandValidate::executeValidate() {
 
         const auto validationMessages = std::move(messagesOS).str();
         if (!validationMessages.empty()) {
-            fmt::print("Validation {}\n", validationResult == 0 ? "successful" : "failed");
+            //fmt::print("Validation {}\n", validationResult == 0 ? "successful" : "failed");
+            fmt::print("Checking {}\n", validationResult == 0 ? "successful" : "failed");
             fmt::print("\n");
             fmt::print("{}", validationMessages);
         }

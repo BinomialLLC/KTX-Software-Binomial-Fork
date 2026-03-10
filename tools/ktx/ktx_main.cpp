@@ -222,6 +222,10 @@ int main(int argc, char* argv[]) {
     //      // pbxproj file, so it can't be disabled in a generated project.
     //      // Remove these from the arguments under consideration.
 
+    printf(
+        "btx v0.10 [BINOMIAL FORK]. Not for validation purposes.\nSee: "
+        "https://github.com/BinomialLLC/KTX-Software-Binomial-Fork\n\n");
+    
     InitUTF8CLI(argc, argv);
 
     if (argc >= 2) {

@@ -167,7 +167,7 @@ void Tools::printUsage(std::ostream& os, const cxxopts::Options& options) {
     fmt::print(os, "  extract    Extract selected images from a KTX2 file\n");
     fmt::print(os, "  transcode  Transcode a KTX2 file\n");
     fmt::print(os, "  info       Print information about a KTX2 file\n");
-    fmt::print(os, "  check      Checking a KTX2 file\n");
+    //fmt::print(os, "  check      Checking a KTX2 file\n");
     fmt::print(os, "  compare    Compare two KTX2 files\n");
     fmt::print(os, "  help       Display help information about the btx tool\n");
 #if KTX_DEVELOPER_FEATURE_PATCH

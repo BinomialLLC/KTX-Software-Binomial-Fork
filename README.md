@@ -45,8 +45,6 @@ The Basis Universal codecs integrated into this repo fall under Binomial's respo
 
 # Quick Build Instructions
 
-The original project's build instructions are incomplete, at least for Windows. You have to add `-D KTX_FEATURE_TOOLS=ON` to build the original KTX-Software and get usable command line tools, which we've fixed in our fork.
-
 Use [cmake](https://cmake.org/):
 
 ```

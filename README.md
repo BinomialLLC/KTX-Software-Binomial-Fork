@@ -6,7 +6,7 @@
 
 *This fork serves as a staging ground for the next generation of GPU texture codecs.*
 
-This is an unofficial, live fork of [KTX-Software](https://github.com/KhronosGroup/KTX-Software) by [Khronos Group member](https://www.khronos.org/) Binomial LLC, with key bug fixes and (soon) new GPU supercompressed texture codecs such as XUASTC LDR. The original project is maintained by the Khronos Group. This fork will be periodically synced vs. KTX-Software. This repo has been integrated against the [Basis Universal](https://github.com/BinomialLLC/basis_universal/) v1.6 library (a snapshot from late 2025), and we're working on integrating the latest version (which is now v2.1). 
+This is an unofficial, live fork of [KTX-Software](https://github.com/KhronosGroup/KTX-Software) by [Khronos Group](https://www.khronos.org/) member Binomial LLC, with key bug fixes and (soon) new GPU supercompressed texture codecs such as XUASTC LDR. The original project is maintained by the Khronos Group. This fork will be periodically synced vs. KTX-Software. This repo has been integrated against the [Basis Universal](https://github.com/BinomialLLC/basis_universal/) v1.6 library (a snapshot from late 2025), and we're working on integrating the latest version (which is now v2.1). 
 
 See our [Release Notes on our main repo here](https://github.com/BinomialLLC/basis_universal/wiki/Release-Notes), which we're keeping in sync with this repo. Also see this [repo's wiki](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/wiki), where we'll document how to use the new codecs we'll be adding to this software.
 

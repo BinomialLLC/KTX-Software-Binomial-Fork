@@ -13,12 +13,16 @@ See our [Release Notes on our main repo here](https://github.com/BinomialLLC/bas
 The primary changes we've made to this repository are:
 - Live back porting, integration and testing of security fixes (such as [this one](https://github.com/BinomialLLC/basis_universal/commit/58e3afbabae592e97e6a736e0908c03bc7a4dd4f)) directly from the main [Basis Universal repo](https://github.com/BinomialLLC/basis_universal).
   
-- The file [`lib/src/basis_encode.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/lib/src/basis_encode.cpp): This fixes the `ktx` (renamed to `btx` in this repo) tool's `--uastc-quality` and `--uastc-hdr-6x6i-level` options, which are broken in KTX-Software. For more technical information, see our [KTX2 File Format Support Technical Details](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) wiki.
+- The file [`lib/src/basis_encode.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/lib/src/basis_encode.cpp): This fixes the `ktx` (renamed to `btx` in this repo) tool's `--uastc-quality` and `--uastc-hdr-6x6i-level` options, which are currently not functional in KTX-Software. For more technical information, see our [KTX2 File Format Support Technical Details](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) wiki.
 
-- **The `ktx` tool has been renamed to `btx` in help text and [`tools/ktx/CMakeLists.txt`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/CMakeLists.txt).** So wherever you would run `ktx`, you can now run `btx`.  **Note `btx` should not be used for specification validation purposes. There is no `--validate` command in this fork, and this command has been completely disabled.** Only `ktx` can do this, which [lives upstream of this fork](https://github.com/KhronosGroup/KTX-Software).
+- **The `ktx` tool has been renamed to `btx` in help text and [`tools/ktx/CMakeLists.txt`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/CMakeLists.txt).** So wherever you would run `ktx`, you can now run `btx`.
+
+**Note `btx` is not intended to be used for KTX2 specification validation purposes, so there is no `--validate` command in this fork. Only `ktx` can do this, which [lives upstream of this fork](https://github.com/KhronosGroup/KTX-Software).**
+
+- The `btx` tool (and this repo) exists mainly for cross‑checking and early interoperability testing of KTX2 files used with Basis Universal related codecs. Specifically, `btx` can be used to test if KTX2 files emitted by `basisu` are readable, and vice versa.
  
 - We've added the `"BINOMIAL FORK"` text to the `btx` tool's `--help` text, in source file [‎`tools/ktx/ktx_main.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/ktx_main.cpp), to clearly indicate to users that they're using our forked version of the command line tool.
-- The `create` command now supports `--verbose` and `--debug` options, so we can validate proper command line parsing/codec parameter passing to our codecs.
+- The `create` command now supports `--verbose` and `--debug` options, so we can ensure correct command line parsing/codec parameter passing to our codecs.
  
 Other improvements and fixes will be made as we find them. We will be integrating and testing the new [XUASTC LDR codec](https://github.com/BinomialLLC/basis_universal/wiki/JPEG-for-ASTC) (shipped in Basis Universal v2.0) into this fork very soon, as indicated to Khronos in an official meeting on 3/7/2026. We are following the project's [original CONTRIBUTING.md file](https://github.com/KhronosGroup/KTX-Software/blob/main/CONTRIBUTING.md), which requires a fork. 
 
@@ -109,11 +113,11 @@ Verbose output, mipmaps, UASTC HDR 6x6i level 4 (valid range is [0,12]), lambda 
 btx create --verbose --format R16G16B16_SFLOAT --generate-mipmap --encode uastc-hdr-6x6i desk.exr file.ktx2 --uastc-hdr-6x6i-level 4 --uastc-hdr-lambda 500
 ```
 
-The generated KTX2 files can then be unpacked, or validated etc. using the `basisu` command line tool, or transcoded to other GPU texture formats using our transcoder module. Binomial has [documented here](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) exactly how the KTX2 file format is utilized by our codecs.
+The generated KTX2 files can then be unpacked using the `basisu` command line tool, or transcoded to other GPU texture formats using our transcoder module. Binomial has [documented here](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) exactly how the KTX2 file format is utilized by our codecs.
 
 Note Basis Universal v2.0 introduced unified/simplified "effort" and "quality" options which work across all of our codecs, which are coming to this fork soon.
 
-# KTX2 Validation Command Line Examples
+# KTX2 Command Line Examples
 
 ## UASTC HDR 4x4
 

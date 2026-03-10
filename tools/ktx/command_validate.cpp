@@ -119,6 +119,10 @@ void CommandValidate::processOptions(cxxopts::Options& opts, cxxopts::ParseResul
 }
 
 void CommandValidate::executeValidate() {
+
+    fprintf(stderr, "Validation is NOT supported by this tool.\nUse ktx: https://github.com/khronosGroup/KTX-Software/\n");
+    exit(EXIT_FAILURE);
+
     InputStream inputStream(options.inputFilepath, *this);
 
     switch (options.format) {

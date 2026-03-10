@@ -58,8 +58,9 @@ Running `btx --help` will display `"[BINOMIAL FORK]"` in the help text, which is
 
 ```
 build\Debug>btx --help
-btx v0.10 [BINOMIAL FORK]. Not for validation purposes.
-See: https://github.com/BinomialLLC/KTX-Software-Binomial-Fork
+btx v0.10 [BINOMIAL FORK]. Not for KTX2 specification validation purposes.
+This fork is only codec and interoperability testing. See:
+https://github.com/BinomialLLC/KTX-Software-Binomial-Fork
 
 btx: Unified CLI frontend for the KTX-Software [BINOMIAL FORK] library with sub-commands for specific operations.
 
@@ -118,8 +119,9 @@ Note Basis Universal v2.0 introduced unified/simplified "effort" and "quality" o
 
 ```
 build\Debug>btx info file.ktx2
-btx v0.10 [BINOMIAL FORK]. Not for validation purposes.
-See: https://github.com/BinomialLLC/KTX-Software-Binomial-Fork
+btx v0.10 [BINOMIAL FORK]. Not for KTX2 specification validation purposes.
+This fork is only codec and interoperability testing. See:
+https://github.com/BinomialLLC/KTX-Software-Binomial-Fork
 
 Checking successful
 
@@ -209,8 +211,9 @@ KTXwriterScParams: --uastc-quality 3 --zstd 2
 
 ```
 build\Debug>btx info file.ktx2
-btx v0.10 [BINOMIAL FORK]. Not for validation purposes.
-See: https://github.com/BinomialLLC/KTX-Software-Binomial-Fork
+btx v0.10 [BINOMIAL FORK]. Not for KTX2 specification validation purposes.
+This fork is only codec and interoperability testing. See:
+https://github.com/BinomialLLC/KTX-Software-Binomial-Fork
 
 Checking successful
 

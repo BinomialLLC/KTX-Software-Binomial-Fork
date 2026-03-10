@@ -12,9 +12,11 @@ See our [Release Notes on our main repo here](https://github.com/BinomialLLC/bas
 
 The primary changes we've made to this repository are:
 - Live back porting, integration and testing of security fixes (such as [this one](https://github.com/BinomialLLC/basis_universal/commit/58e3afbabae592e97e6a736e0908c03bc7a4dd4f)) directly from the main [Basis Universal repo](https://github.com/BinomialLLC/basis_universal).
+  
 - The file [`lib/src/basis_encode.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/lib/src/basis_encode.cpp): This fixes the `ktx` (renamed to `btx` in this repo) tool's `--uastc-quality` and `--uastc-hdr-6x6i-level` options, which are broken in KTX-Software. For more technical information, see our [KTX2 File Format Support Technical Details](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) wiki.
 
-- **The `ktx` tool has been renamed to `btx` in help text and [`tools/ktx/CMakeLists.txt`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/CMakeLists.txt).** So wherever you would run `ktx`, you can now run `btx`.
+- **The `ktx` tool has been renamed to `btx` in help text and [`tools/ktx/CMakeLists.txt`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/CMakeLists.txt).** So wherever you would run `ktx`, you can now run `btx`.  Note `btx` should not be used for specification validation purposes. There is no `--validate` command in this fork. Only `ktx` can do this, which [lives upstream of this fork](https://github.com/KhronosGroup/KTX-Software).
+ 
 - We've added the `"BINOMIAL FORK"` text to the `btx` tool's `--help` text, in source file [‎`tools/ktx/ktx_main.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/ktx_main.cpp), to clearly indicate to users that they're using our forked version of the command line tool.
 - The `create` command now supports `--verbose` and `--debug` options, so we can validate proper command line parsing/codec parameter passing to our codecs.
  
@@ -77,7 +79,6 @@ Available commands:
   extract    Extract selected images from a KTX2 file
   transcode  Transcode a KTX2 file
   info       Print information about a KTX2 file
-  check      Validate a KTX2 file
   compare    Compare two KTX2 files
   help       Display help information about the btx tool
 

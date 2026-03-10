@@ -134,6 +134,8 @@ void CommandValidate::executeValidate() {
             fmt::print(messagesOS, "    {}\n", issue.details);
         });
 
+        printf("Check result: %u\n", (uint32_t)validationResult);
+
         const auto validationMessages = std::move(messagesOS).str();
         if (!validationMessages.empty()) {
             //fmt::print("Validation {}\n", validationResult == 0 ? "successful" : "failed");

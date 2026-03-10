@@ -39,6 +39,10 @@ Binomial LLC is a Khronos Group Member, and contributions by Members to products
 
 This fork exists to ensure that security fixes and new Basis Universal codecs reach developers as quickly as possible, without being bottlenecked by the upstream contribution timeline.
 
+# Security Note
+
+The Basis Universal codecs integrated into this repo fall under Binomial's responsibility for security reports and fixes. The other code in this repository was not authored by Binomial, but if we do receive a security fix for this code we'll do our best to quickly address any issues. See the GitHub Security tab above, or the [file SECURITY.md](SECURITY.md) for reporting information.
+
 # Quick Build Instructions
 
 The original project's build instructions are incomplete, at least for Windows. You have to add `-D KTX_FEATURE_TOOLS=ON` to build the original KTX-Software and get usable command line tools, which we've fixed in our fork.

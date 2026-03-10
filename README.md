@@ -41,7 +41,7 @@ This fork exists to ensure that security fixes and new Basis Universal codecs re
 
 # Security Note
 
-The Basis Universal codecs integrated into this repo fall under Binomial's responsibility for security reports and fixes. The other code in this repository was not authored by Binomial, but if we do receive a security fix for this code we'll do our best to quickly address any issues. See the GitHub Security tab above, or the [file SECURITY.md](SECURITY.md) for reporting information.
+The Basis Universal codecs integrated into this repo fall under Binomial's responsibility for security reports and fixes. The other code in this repository was not authored by Binomial, but if we do receive a security fix for this code we'll do our best to quickly address any issues. See the GitHub Security tab above, or the file [SECURITY.md](SECURITY.md) for reporting information.
 
 # Quick Build Instructions
 

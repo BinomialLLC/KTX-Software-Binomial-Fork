@@ -50,7 +50,7 @@ Then, under Linux or OSX:
 make
 ```
 
-Under Windows, `KTX-Software.sln` can then be used to build the solution using Visual Studio. The tool for validation, compression and extraction of KTX2 files is `btx`, which will be placed in the `build/Debug` or `build/Release` directories under Windows, or in the build directory on other platforms. See the tool's original [documentation here](https://github.khronos.org/KTX-Software/ktxtools/index.html).
+Under Windows, `KTX-Software.sln` can then be used to build the solution using Visual Studio. The tool for introspecting, compression and extraction of KTX2 files is `btx`, which will be placed in the `build/Debug` or `build/Release` directories under Windows, or in the build directory on other platforms. See the tool's original [documentation here](https://github.khronos.org/KTX-Software/ktxtools/index.html).
 
 Running `btx --help` will display `"[BINOMIAL FORK]"` in the help text, which is how you can tell you're running a version of `btx` with Binomial's fixes and improvements:
 
@@ -77,7 +77,7 @@ Available commands:
   extract    Extract selected images from a KTX2 file
   transcode  Transcode a KTX2 file
   info       Print information about a KTX2 file
-  validate   Validate a KTX2 file
+  check      Validate a KTX2 file
   compare    Compare two KTX2 files
   help       Display help information about the btx tool
 

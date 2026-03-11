@@ -24,6 +24,7 @@ The primary changes we've made to this repository are:
 - We've added the `"BINOMIAL FORK"` text to the `btx` tool's `--help` text, in source file [‎`tools/ktx/ktx_main.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/ktx_main.cpp), to clearly indicate to users that they're using our forked version of the command line tool.
 - The `create` command now supports `--verbose` and `--debug` options, so we can ensure correct command line parsing/codec parameter passing to our codecs.
 - `CMakeLists.txt` has been modified to only build `btx`, as that's all we need for development and testing.
+- Key ASTC HDR 6x6i/UASTC HDR 6x6i and transcoder bc6hf encoder fixes (discovered during encoder fuzzing) have been back ported from basisu v2.1 to v1.6 and merged into this repo
  
 Other improvements and fixes will be made as we find them. We will be integrating and testing the new [XUASTC LDR codec](https://github.com/BinomialLLC/basis_universal/wiki/JPEG-for-ASTC) (shipped in Basis Universal v2.0) into this fork very soon, as indicated to Khronos in an official meeting on 3/7/2026. We are following the project's [original CONTRIBUTING.md file](https://github.com/KhronosGroup/KTX-Software/blob/main/CONTRIBUTING.md), which requires a fork. 
 

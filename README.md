@@ -38,7 +38,7 @@ Binomial LLC is a Khronos Group Member, and contributions by Members to products
 
 # What Motivated This Fork
 
-This fork exists to ensure that security fixes and new Basis Universal codecs reach developers as quickly as possible, without being bottlenecked by the upstream contribution timeline.
+This fork exists to ensure that bug and security fixes, and new Basis Universal codecs, reach developers as quickly as possible, without being bottlenecked by the upstream contribution timeline.
 
 # Quick Build Instructions
 

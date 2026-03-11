@@ -6,41 +6,41 @@
 
 *This fork serves as a staging ground for the next generation of GPU texture codecs.*
 
-This is an unofficial, live fork of [KTX-Software](https://github.com/KhronosGroup/KTX-Software) by [Khronos Group member](https://www.khronos.org/) Binomial LLC, with key bug fixes and (soon) new GPU supercompressed texture codecs such as XUASTC LDR. The original project is maintained by the Khronos Group. This fork will be periodically synced vs. KTX-Software. This repo has been integrated against the [Basis Universal](https://github.com/BinomialLLC/basis_universal/) v1.6 library (a snapshot from late 2025), and we're working on integrating the latest version (which is now v2.1). 
+This is an unofficial, live fork of [KTX-Software](https://github.com/KhronosGroup/KTX-Software) by [Khronos Group](https://www.khronos.org/) member Binomial LLC, with key bug fixes and (soon) new GPU supercompressed texture codecs such as XUASTC LDR. The original project is maintained by the Khronos Group. This fork will be periodically synced vs. KTX-Software. This repo has been integrated against the [Basis Universal](https://github.com/BinomialLLC/basis_universal/) v1.6 library (a snapshot from late 2025), and we're working on integrating the latest version (which is now v2.1). 
 
 See our [Release Notes on our main repo here](https://github.com/BinomialLLC/basis_universal/wiki/Release-Notes), which we're keeping in sync with this repo. Also see this [repo's wiki](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/wiki), where we'll document how to use the new codecs we'll be adding to this software.
 
 The primary changes we've made to this repository are:
-- Live back porting, integration and testing of security fixes (such as [this one](https://github.com/BinomialLLC/basis_universal/commit/58e3afbabae592e97e6a736e0908c03bc7a4dd4f)) directly from the main [Basis Universal repo](https://github.com/BinomialLLC/basis_universal).
+- Live back porting, integration and testing of security fixes directly from the main [Basis Universal repo](https://github.com/BinomialLLC/basis_universal).
   
 - The file [`lib/src/basis_encode.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/lib/src/basis_encode.cpp): This fixes the `ktx` (renamed to `btx` in this repo) tool's `--uastc-quality` and `--uastc-hdr-6x6i-level` options, which are currently not functional in KTX-Software. For more technical information, see our [KTX2 File Format Support Technical Details](https://github.com/BinomialLLC/basis_universal/wiki/KTX2-File-Format-Support-Technical-Details#intro) wiki.
 
 - **The `ktx` tool has been renamed to `btx` in help text and [`tools/ktx/CMakeLists.txt`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/CMakeLists.txt).** So wherever you would run `ktx`, you can now run `btx`.
 
-**Note `btx` is not intended to be used for KTX2 specification validation purposes, so there is no `--validate` command in this fork. Only `ktx` can do this, which [lives upstream of this fork](https://github.com/KhronosGroup/KTX-Software).**
+**Note `btx` is not intended to be used for KTX2 specification validation purposes, so there is no `validate` command in this fork. Only `ktx` can do this, which [lives upstream of this fork](https://github.com/KhronosGroup/KTX-Software).** The other commands (`info`, `create`, `extract` etc.) work as usual.
 
 - The `btx` tool (and this repo) exists mainly for cross‑checking and early interoperability testing of KTX2 files used with Basis Universal related codecs. Specifically, `btx` can be used to test if KTX2 files emitted by `basisu` are readable, and vice versa.
  
 - We've added the `"BINOMIAL FORK"` text to the `btx` tool's `--help` text, in source file [‎`tools/ktx/ktx_main.cpp`](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/tools/ktx/ktx_main.cpp), to clearly indicate to users that they're using our forked version of the command line tool.
 - The `create` command now supports `--verbose` and `--debug` options, so we can ensure correct command line parsing/codec parameter passing to our codecs.
+- `CMakeLists.txt` has been modified to only build `btx`, as that's all we need for development and testing.
+- Key ASTC HDR 6x6i/UASTC HDR 6x6i and transcoder bc6hf encoder fixes (discovered during encoder fuzzing) have been back ported from basisu v2.1 to v1.6 and merged into this repo
  
 Other improvements and fixes will be made as we find them. We will be integrating and testing the new [XUASTC LDR codec](https://github.com/BinomialLLC/basis_universal/wiki/JPEG-for-ASTC) (shipped in Basis Universal v2.0) into this fork very soon, as indicated to Khronos in an official meeting on 3/7/2026. We are following the project's [original CONTRIBUTING.md file](https://github.com/KhronosGroup/KTX-Software/blob/main/CONTRIBUTING.md), which requires a fork. 
 
 # License and Legal
 
-This independent fork is not endorsed by or an official product of the Khronos Group. Khronos® is a registered trademark of The Khronos Group Inc. This software is Copyright 2015-2026 [The Khronos Group Inc.](https://www.khronos.org/) KTX™ is a trademark of The Khronos Group Inc. See the project's Apache 2.0 [license information](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/tree/main?tab=License-1-ov-file#readme), and see the actual [LICENSE here](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/LICENSES/Apache-2.0.txt). Basis Universal™ is a trademark of Binomial LLC.
+This independent fork is not endorsed by or an official product of the Khronos Group. Khronos® is a registered trademark of The Khronos Group Inc. This software is Copyright 2015-2026 [The Khronos Group Inc.](https://www.khronos.org/) KTX™ is a trademark of The Khronos Group Inc. See the project's Apache 2.0 [license information](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/tree/main?tab=License-1-ov-file#readme), and see the actual [LICENSE here](https://github.com/BinomialLLC/KTX-Software-Binomial-Fork/blob/main/LICENSES/Apache-2.0.txt).
 
 All changes to the original software have been prominently indicated with comments, as required by the Apache License, Version 2.0 §4(b). Our modifications are licensed under the Apache License, Version 2.0. 
 
-Binomial LLC is a Khronos Group Member, and contributions by Members to products based on Khronos Ratified Specifications are covered under the [Khronos Membership Agreement's](https://www.khronos.org/files/member_agreement.pdf) IP Rights Policy (Attachment A, Sections 2.1 and 2.2).
+Binomial LLC is a Khronos Group Member, and contributions by Members to products based on Khronos Ratified Specifications are covered under the [Khronos Membership Agreement's](https://www.khronos.org/files/member_agreement.pdf) IP Rights Policy (Attachment A, Sections 2.1 and 2.2). Basis Universal™ is a trademark of Binomial LLC.
 
 # What Motivated This Fork
 
 This fork exists to ensure that security fixes and new Basis Universal codecs reach developers as quickly as possible, without being bottlenecked by the upstream contribution timeline.
 
 # Quick Build Instructions
-
-The original project's build instructions are incomplete, at least for Windows. You have to add `-D KTX_FEATURE_TOOLS=ON` to build the original KTX-Software and get usable command line tools, which we've fixed in our fork.
 
 Use [cmake](https://cmake.org/):
 
@@ -353,6 +353,12 @@ This will extract all mipmap files to image files in the "mips" directory. For t
 ```
 btx extract --all file.ktx2 mips
 ```
+
+----
+
+# Security Note
+
+The Basis Universal codecs integrated into this repo fall under Binomial's responsibility for security reports and fixes. The other code in this repository was not authored by Binomial, but if we do receive a security fix for this code we'll do our best to quickly address any issues. See the GitHub Security tab above, or the file [SECURITY.md](SECURITY.md) for reporting information.
 
 ----
 

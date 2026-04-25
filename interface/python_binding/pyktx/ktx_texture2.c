@@ -128,7 +128,13 @@ KTX_error_code PY_ktxTexture2_CompressBasisEx(ktxTexture2 *texture,
         .uastcRDOMaxSmoothBlockErrorScale = uastcRDOMaxSmoothBlockErrorScale,
         .uastcRDOMaxSmoothBlockStdDev = uastcRDOMaxSmoothBlockStdDev,
         .uastcRDODontFavorSimplerModes = uastcRDODontFavorSimplerModes,
-        .uastcRDONoMultithreading = uastcRDONoMultithreading
+        .uastcRDONoMultithreading = uastcRDONoMultithreading,
+        .uastcHDRQuality = uastcHDRQuality,
+        .uastcHDRUberMode = uastcHDRUberMode,
+        .uastcHDRUltraQuant = uastcHDRUltraQuant,
+        .uastcHDRFavorAstc = uastcHDRFavorAstc,
+        .uastcHDRLambda = uastcHDRLambda,
+        .uastcHDRLevel = uastcHDRLevel
     };
 
     params.inputSwizzle[0] = inputSwizzle[0];
